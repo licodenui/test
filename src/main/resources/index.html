@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input  id="name"  />
+		<button onclick="submit()" >提交</button>
+	</body>
+	<script type="text/javascript">
+		var submit = function(){
+			alert(document.getElementById("name").value)
+			var name = document.getElementById("name").value;
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "http://127.0.0.1:8888/test?name="+name+"&stuId=1801", false);
+  			xhr.send();
+		}
+	</script>
+</html>
